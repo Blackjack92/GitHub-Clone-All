@@ -51,7 +51,7 @@ def read_primary_language(languages_api, access_token):
     # take just languages
     programming_languages = json.loads(programming_languages.text).keys()
     # take first language entry
-    primary_language = next(iter(programming_languages)) if len(programming_languages) > 0 else "UNKNOW"
+    primary_language = next(iter(programming_languages)) if len(programming_languages) > 0 else "UNKNOWN"
     return primary_language
 
 def clone_project(target_folder, project_name, repository, repository_with_credentials):
