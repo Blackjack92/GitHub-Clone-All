@@ -47,7 +47,6 @@ def generate_languages_api(repository, username):
 
 def read_primary_language(languages_api, access_token):
     # read languages and occurences
-    # programming_languages = get(languages_api, auth=(username, password))
     programming_languages = get(languages_api, headers={'Authorization': 'token {}'.format(access_token)})
     # take just languages
     programming_languages = json.loads(programming_languages.text).keys()
