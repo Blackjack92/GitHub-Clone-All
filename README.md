@@ -1,4 +1,4 @@
-# Clone all GitHub Repositories
+# Clone all GitHub Repositories (max. 100)
 
 The following repository contains a simple repository cloner. Depending on a given username and access token all related repositories are downloaded. Furthermore it sorts the downloaded repositories regarding the respective primary language of a repository. When no language is given, the repository will be cloned into a folder called "UNKNOWN".
 
