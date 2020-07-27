@@ -23,9 +23,10 @@ username = requote_uri(username)
 
 
 def read_all_repositories(username, access_token):
+    # actuall it does not use paging, therefore a maximum of 100 repos can be downloaded
     repositories = json.loads(
         get(
-            "https://api.github.com/users/{}/repos".format(username),
+            "https://api.github.com/user/repos?visibility=all&per_page=100",
             headers={'Authorization': 'token {}'.format(access_token)}
         ).text)
 
